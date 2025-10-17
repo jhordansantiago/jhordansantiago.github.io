@@ -5,11 +5,11 @@
   width: 16px; /* Reduzindo ainda mais o tamanho */
   height: 16px; /* Reduzindo ainda mais o tamanho */
   vertical-align: middle;
-  transition: transform 0.2s;
+  transition: transform 0.1s;
 }
 
 .orcid-icon:hover {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .fa-leaf {
@@ -54,7 +54,7 @@ header {
     display: flex;
     align-items: flex-start;
     margin-bottom: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     border-bottom: 1px solid var(--border-color);
 }
 
