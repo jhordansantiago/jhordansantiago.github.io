@@ -2,8 +2,8 @@
    Reset and Base Styles
 ============================== */
 .orcid-icon {
-  width: 17px; /* Reduzindo ainda mais o tamanho */
-  height: 17px; /* Reduzindo ainda mais o tamanho */
+  width: 16px; /* Reduzindo ainda mais o tamanho */
+  height: 16px; /* Reduzindo ainda mais o tamanho */
   vertical-align: middle;
   transition: transform 0.2s;
 }
