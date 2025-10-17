@@ -1,6 +1,13 @@
 /* ==============================
    Social Icons - Ajuste ORCID
 ============================== */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+  align-items: center;
+}
+
 .social-icons a {
   color: var(--accent-blue);
   font-size: 11px;
@@ -13,12 +20,10 @@
   color: var(--accent-blue-hover);
 }
 
+/* ORCID específico */
 .orcid-icon {
-  width: 16px;    /* tamanho do ícone */
-  height: 16px;
   vertical-align: baseline; /* alinha à linha base dos outros ícones */
-  margin-top: -2px;         /* ajuste fino para alinhar visualmente */
-  display: inline-block;     /* mantém alinhamento dentro do link */
+  display: inline-block;
   transition: transform 0.1s;
 }
 
@@ -26,28 +31,26 @@
   transform: scale(1);
 }
 
-/* ==============================
-   Ajuste específico para Mobile
-============================== */
+/* Desktop (default) */
+@media (min-width: 769px) {
+  .orcid-icon {
+    width: 16px;
+    height: 16px;
+    margin-top: -2px; /* ajuste fino para desktop */
+  }
+}
+
+/* Mobile ajustes */
 @media (max-width: 768px) {
   .social-icons a {
-    font-size: 1rem;       /* mantém todos os ícones do mesmo tamanho */
+    font-size: 1rem; /* mantém todos os ícones do mesmo tamanho */
   }
 
   .orcid-icon {
-    width: 16px;            /* mantém o mesmo tamanho */
-    height: 16px;
-    margin-top: -1px;       /* ajuste fino no mobile */
+    width: 14px;      /* tamanho menor no mobile */
+    height: 14px;
+    margin-top: -1px; /* ajuste fino no mobile */
   }
-}
-
-.texto-justificado {
-  text-align: justify;
-}
-
-.fa-leaf {
-  color: var(--accent-blue);
-  font-size: 1.2em;
 }
 
 :root {
