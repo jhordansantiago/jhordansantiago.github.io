@@ -18,16 +18,17 @@
 }
 
 :root {
-    --bg-black: #101010;
-    --bg-dark: #0a0a0a;
-    --bg-white: #ffffff;
-    --text-primary: #101010;
-    --text-secondary: #101010;
+    --bg-black: #ffffff;
+    --bg-dark: #f5f5f5;
+    --bg-white: #000000;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
     --accent-blue: #0044cc;
     --accent-blue-hover: #003399;
     --link-color: #0044cc;
-    --border-color: #1a1a1a;
+    --border-color: #e5e5e5;
 }
+
 
 body {
     font-family: 'Lato', sans-serif;
