@@ -1,15 +1,44 @@
 /* ==============================
-   Reset and Base Styles
+   Social Icons - Ajuste ORCID
 ============================== */
+.social-icons a {
+  color: var(--accent-blue);
+  font-size: 11px;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center; /* garante alinhamento vertical */
+}
+
+.social-icons a:hover {
+  color: var(--accent-blue-hover);
+}
+
 .orcid-icon {
-  width: 16px; /* Reduzindo ainda mais o tamanho */
-  height: 16px; /* Reduzindo ainda mais o tamanho */
-  vertical-align: middle;
+  width: 16px;    /* tamanho do ícone */
+  height: 16px;
+  vertical-align: baseline; /* alinha à linha base dos outros ícones */
+  margin-top: -2px;         /* ajuste fino para alinhar visualmente */
+  display: inline-block;     /* mantém alinhamento dentro do link */
   transition: transform 0.1s;
 }
 
 .orcid-icon:hover {
   transform: scale(1);
+}
+
+/* ==============================
+   Ajuste específico para Mobile
+============================== */
+@media (max-width: 768px) {
+  .social-icons a {
+    font-size: 1rem;       /* mantém todos os ícones do mesmo tamanho */
+  }
+
+  .orcid-icon {
+    width: 16px;            /* mantém o mesmo tamanho */
+    height: 16px;
+    margin-top: -1px;       /* ajuste fino no mobile */
+  }
 }
 
 .texto-justificado {
