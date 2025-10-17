@@ -2,8 +2,8 @@
    Reset and Base Styles
 ============================== */
 .orcid-icon {
-  width: 16px; /* Reduzindo ainda mais o tamanho */
-  height: 16px; /* Reduzindo ainda mais o tamanho */
+  width: 16px;
+  height: 16px;
   vertical-align: middle;
   transition: transform 0.1s;
 }
@@ -11,384 +11,382 @@
 .orcid-icon:hover {
   transform: scale(1);
 }
+
 .texto-justificado {
-      text-align: justify;
-    }
+  text-align: justify;
+}
+
 .fa-leaf {
-    color: var(--accent-blue);
-    font-size: 1.2em;
+  color: var(--accent-blue);
+  font-size: 1.2em;
 }
 
 :root {
-    --bg-black: #ffffff;
-    --bg-dark: #f5f5f5;
-    --bg-white: #000000;
-    --text-primary: #ffffff;
-    --text-secondary: #ffffff;
-    --accent-blue: #0044cc;
-    --accent-blue-hover: #003399;
-    --link-color: #0044cc;
-    --border-color: #e5e5e5;
+  --bg-black: #ffffff;
+  --bg-dark: #f5f5f5;
+  --bg-white: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --accent-blue: #0044cc;
+  --accent-blue-hover: #003399;
+  --link-color: #0044cc;
+  --border-color: #e5e5e5;
+
+  /* Novo: espaçamento vertical padrão */
+  --section-spacing: 40px;
 }
 
-
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: var(--bg-white);
-    color: var(--text-primary);
-    line-height: 1.5;
-    font-size: 13px;
+  font-family: 'Lato', sans-serif;
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  line-height: 1.5;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
 }
 
 /* ==============================
    Layout Containers
 ============================== */
 .container {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px 15px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px 15px;
 }
 
 /* ==============================
    Header
 ============================== */
 header {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--section-spacing);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .header-left {
-    flex-shrink: 0;
-    margin-right: 25px;
+  flex-shrink: 0;
+  margin-right: 30px;
 }
 
 .profile-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--bg-white);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--bg-white);
 }
 
 .header-right {
-    flex: 1;
+  flex: 1;
 }
 
 h1 {
-    font-family: 'Lato', sans-serif;
-    font-size: 30px; /* Restaurando para um tamanho maior */
-    font-weight: 700;
-    color: var(--text-primary); /* Alterando para preto */
-    margin-bottom: 16px;
-    letter-spacing: -0.5px;
-    text-align: middle; /* Alinhando o nome à esquerda */
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
 }
 
 /* ==============================
    Navigation
 ============================== */
 nav {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: var(--section-spacing);
 }
 
 nav a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
-    position: relative;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  position: relative;
 }
 
 nav a:hover,
 nav a.active {
-    color: var(--accent-blue);
+  color: var(--accent-blue);
 }
 
 nav a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: var(--accent-blue);
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--accent-blue);
 }
 
 /* ==============================
    Social Icons
 ============================== */
 .social-icons {
-    display: flex;
-    gap: 12px;
-    margin-left: auto;
-    align-items: center;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin: var(--section-spacing) 0;
 }
 
 .social-icons a {
-    color: var(--accent-blue);
-    font-size: 11px;
-    transition: color 0.3s ease;
+  color: var(--accent-blue);
+  font-size: 11px;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: var(--accent-blue-hover);
+  color: var(--accent-blue-hover);
 }
 
 /* ==============================
    Main Content
 ============================== */
 main {
-    margin-bottom: 25px;
+  margin-bottom: var(--section-spacing);
 }
 
 .content {
-    max-width: 500px;
+  max-width: 500px;
+  margin-bottom: var(--section-spacing);
 }
 
 .content p {
-    margin-bottom: 1.2rem;
-    text-align: justify;
-    color: var(--text-primary);
+  margin-bottom: 1.2rem;
+  text-align: justify;
+  color: var(--text-primary);
 }
 
 .content a {
-    color: var(--accent-blue);
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .content a:hover {
-    color: var(--accent-blue-hover);
-    text-decoration: underline;
+  color: var(--accent-blue-hover);
+  text-decoration: underline;
 }
 
 /* ==============================
    Headings
 ============================== */
+h2,
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+  margin-top: var(--section-spacing);
+}
+
 h2 {
-    font-family: 'Lato', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--accent-blue);
-    margin-bottom: 1.5rem;
-    margin-top: 2.5rem;
+  font-size: 15px;
 }
 
 h3 {
-    font-family: 'Lato', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--accent-blue);
-    margin-bottom: 1rem;
-    margin-top: 2rem;
+  font-size: 15px;
 }
 
 /* ==============================
    Publications Page
 ============================== */
 .publications p {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .presentation-note {
-    font-size: 0.9rem;
-    color: var(--text-primary);
-    margin-bottom: 1.5rem;
-    margin-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
 }
 
 /* ==============================
    Quotations Page
 ============================== */
 .quotations blockquote {
-    background-color: var(--bg-white);
-    border-left: 4px solid var(--accent-blue);
-    padding: 0.1rem 0.4rem; /* Reduzindo ao mínimo o padding */
-    margin: 0.1rem 0 0.1rem auto; /* Alinhando à direita */
-    font-style: italic;
-    color: var(--text-primary);
-    max-width: 80%; /* Para que não ocupe a largura toda e o alinhamento seja visível */
+  background-color: var(--bg-white);
+  border-left: 4px solid var(--accent-blue);
+  padding: 0.1rem 0.4rem;
+  margin: 0.1rem auto var(--section-spacing) auto;
+  font-style: italic;
+  color: var(--text-primary);
+  max-width: 80%;
 }
 
 .quotations blockquote p {
-    font-size: 11px;
-    margin-bottom: 0.1rem; /* Reduzindo o espaçamento */
-    line-height: 1.5;
+  font-size: 11px;
+  margin-bottom: 0.1rem;
+  line-height: 1.5;
 }
 
 .quotations blockquote footer {
-    text-align: right;
-    font-size: 11px;
-    color: var(--text-primary);
-    font-style: normal;
+  text-align: right;
+  font-size: 11px;
+  color: var(--text-primary);
+  font-style: normal;
 }
 
 /* ==============================
    Research Page Lists
 ============================== */
 .content ul {
-    list-style: disc inside;
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
+  list-style: disc inside;
+  margin-left: 1.5rem;
+  margin-bottom: var(--section-spacing);
 }
 
 .content ul li {
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
 }
 
 /* ==============================
    Image Section
 ============================== */
 .image-section {
-    margin-top: 25px;
-    text-align: center;
+  margin-top: var(--section-spacing);
+  margin-bottom: var(--section-spacing);
+  text-align: center;
 }
 
 .content-image {
-    max-width: 100%;
-    height: auto;
-    border: none; /* REMOVIDA A BORDA */
-    margin-top: 25px;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  margin-top: 20px;
 }
 
 /* ==============================
    Footer
 ============================== */
 footer {
-    text-align: center;
-    padding-top: 10px;
-    border-top: 1px solid var(--border-color);
-    color: var(--text-primary);
-    font-size: 0.9rem;
+  text-align: center;
+  padding-top: var(--section-spacing);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  margin-top: var(--section-spacing);
 }
 
 footer p {
-    margin: 0.3rem 0;
+  margin: 0.3rem 0;
 }
 
 footer a {
-    color: var(--accent-blue);
-    text-decoration: none;
+  color: var(--accent-blue);
+  text-decoration: none;
 }
 
 footer a:hover {
-    color: var(--accent-blue-hover);
-    text-decoration: underline;
+  color: var(--accent-blue-hover);
+  text-decoration: underline;
 }
 
 .footer-icons {
-    display: none;
-}
-
-.footer-icons a {
-    color: var(--accent-blue);
-    font-size: 11px;
-    transition: color 0.3s ease;
-}
-
-.footer-icons a:hover {
-    color: var(--accent-blue-hover);
+  display: none;
 }
 
 .footer-note {
-    font-size: 0.8rem;
-    color: var(--text-primary);
-    margin-top: 10px;
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  margin-top: 10px;
 }
 
 /* ==============================
    Responsive Design
 ============================== */
 @media (max-width: 768px) {
-    .container {
-        padding: 20px 15px;
-    }
+  .container {
+    padding: 20px 15px;
+  }
 
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .header-left {
-        margin-right: 0;
-        margin-bottom: 25px;
-    }
+  .header-left {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 
-    .profile-photo {
-        width: 100px;
-        height: 100px;
-    }
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
 
-    h1 {
-        font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    nav {
-        justify-content: center;
-    }
+  nav {
+    justify-content: center;
+  }
 
-    .social-icons {
-        margin-left: 0;
-        margin-top: 15px;
-    }
+  .social-icons {
+    margin: 30px 0;
+  }
 
-    h2 {
-        font-size: 1.5rem;
-    }
+  h2 {
+    font-size: 1.5rem;
+  }
 
-    h3 {
-        font-size: 1.2rem;
-    }
+  h3 {
+    font-size: 1.2rem;
+  }
 
-    .content p {
-        text-align: left;
-    }
+  .content p {
+    text-align: left;
+  }
 
-    .quotations blockquote {
-        padding: 1rem 1.5rem;
-    }
+  .quotations blockquote {
+    padding: 1rem 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.7rem;
-    }
+  h1 {
+    font-size: 1.7rem;
+  }
 
-    nav a {
-        font-size: 0.85rem;
-    }
+  nav a {
+    font-size: 0.85rem;
+  }
 
-    .social-icons a {
-        font-size: 1rem;
-    }
+  .social-icons a {
+    font-size: 1rem;
+  }
 
-    .footer-icons a {
-        font-size: 1.1rem;
-    }
+  .footer-icons a {
+    font-size: 1.1rem;
+  }
 }
 
 /* ==============================
    Miscellaneous
 ============================== */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 ::selection {
-    background-color: var(--accent-blue);
-    color: #ffffff;
+  background-color: var(--accent-blue);
+  color: #ffffff;
 }
 
 ::-moz-selection {
-    background-color: var(--accent-blue);
-    color: #ffffff;
+  background-color: var(--accent-blue);
+  color: #ffffff;
 }
 
