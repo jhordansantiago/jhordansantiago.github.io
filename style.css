@@ -62,7 +62,7 @@ header {
 
 .header-left {
     flex-shrink: 0;
-    margin-right: 30px;
+    margin-right: 25px;
 }
 
 .profile-photo {
@@ -247,7 +247,7 @@ h3 {
    Image Section
 ============================== */
 .image-section {
-    margin-top: 40px;
+    margin-top: 25px;
     text-align: center;
 }
 
@@ -255,7 +255,7 @@ h3 {
     max-width: 100%;
     height: auto;
     border: none; /* REMOVIDA A BORDA */
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 /* ==============================
@@ -319,7 +319,7 @@ footer a:hover {
 
     .header-left {
         margin-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     .profile-photo {
@@ -337,7 +337,7 @@ footer a:hover {
 
     .social-icons {
         margin-left: 0;
-        margin-top: 10px;
+        margin-top: 15px;
     }
 
     h2 {
