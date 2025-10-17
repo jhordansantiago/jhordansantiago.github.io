@@ -68,7 +68,7 @@ header {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--accent-blue);
+    border: 2px solid var(--bg-white);
 }
 
 .header-right {
