@@ -81,7 +81,7 @@ h1 {
     color: var(--text-primary); /* Alterando para preto */
     margin-bottom: 16px;
     letter-spacing: -0.5px;
-    text-align: right; /* Alinhando o nome à direita */
+    text-align: left; /* Alinhando o nome à esquerda */
 }
 
 /* ==============================
