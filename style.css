@@ -1,66 +1,9 @@
 /* ==============================
    Reset and Base Styles
 ============================== */
-:root {
-  --accent-blue: #0077cc;
-  --accent-blue-hover: #005fa3;
-  --section-spacing: 40px;
-  --text-color: #333;
-  --background-color: #fff;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  line-height: 1.6;
-  transition: all 0.3s ease;
-}
-
-/* ==============================
-   Layout and Structure
-============================== */
-header,
-section,
-footer {
-  max-width: 900px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-section {
-  margin-top: var(--section-spacing);
-}
-
-/* ==============================
-   Header
-============================== */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-  margin-bottom: var(--section-spacing);
-}
-
-header h1 {
-  font-size: 1.8em;
-  color: var(--accent-blue);
-}
-
-/* ==============================
-   ORCID Icon
-============================== */
 .orcid-icon {
-  width: 16px;
-  height: 16px;
+  width: 16px; /* Reduzindo ainda mais o tamanho */
+  height: 16px; /* Reduzindo ainda mais o tamanho */
   vertical-align: middle;
   transition: transform 0.1s;
 }
@@ -69,15 +12,123 @@ header h1 {
   transform: scale(1);
 }
 
+.texto-justificado {
+  text-align: justify;
+}
+
+.fa-leaf {
+  color: var(--accent-blue);
+  font-size: 1.2em;
+}
+
+:root {
+  --bg-black: #ffffff;
+  --bg-dark: #f5f5f5;
+  --bg-white: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --accent-blue: #0044cc;
+  --accent-blue-hover: #003399;
+  --link-color: #0044cc;
+  --border-color: #e5e5e5;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+/* ==============================
+   Layout Containers
+============================== */
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+/* ==============================
+   Header
+============================== */
+header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-left {
+  flex-shrink: 0;
+  margin-right: 25px;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--bg-white);
+}
+
+.header-right {
+  flex: 1;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px; /* Restaurando para um tamanho maior */
+  font-weight: 700;
+  color: var(--text-primary); /* Alterando para preto */
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+  text-align: middle; /* Alinhando o nome à esquerda */
+}
+
+/* ==============================
+   Navigation
+============================== */
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent-blue);
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--accent-blue);
+}
+
 /* ==============================
    Social Icons
 ============================== */
 .social-icons {
   display: flex;
   gap: 12px;
+  margin-left: auto;
   align-items: center;
-  justify-content: center;
-  margin: 25px 0; /* Espaçamento equilibrado no desktop */
 }
 
 .social-icons a {
@@ -91,112 +142,253 @@ header h1 {
 }
 
 /* ==============================
+   Main Content
+============================== */
+main {
+  margin-bottom: 25px;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.content p {
+  margin-bottom: 1.2rem;
+  text-align: justify;
+  color: var(--text-primary);
+}
+
+.content a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.content a:hover {
+  color: var(--accent-blue-hover);
+  text-decoration: underline;
+}
+
+/* ==============================
+   Headings
+============================== */
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+/* ==============================
+   Publications Page
+============================== */
+.publications p {
+  margin-bottom: 0.5rem;
+}
+
+.presentation-note {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+}
+
+/* ==============================
+   Quotations Page
+============================== */
+.quotations blockquote {
+  background-color: var(--bg-white);
+  border-left: 4px solid var(--accent-blue);
+  padding: 0.1rem 0.4rem; /* Reduzindo ao mínimo o padding */
+  margin: 0.1rem 0 0.1rem auto; /* Alinhando à direita */
+  font-style: italic;
+  color: var(--text-primary);
+  max-width: 80%; /* Para que não ocupe a largura toda e o alinhamento seja visível */
+}
+
+.quotations blockquote p {
+  font-size: 11px;
+  margin-bottom: 0.1rem; /* Reduzindo o espaçamento */
+  line-height: 1.5;
+}
+
+.quotations blockquote footer {
+  text-align: right;
+  font-size: 11px;
+  color: var(--text-primary);
+  font-style: normal;
+}
+
+/* ==============================
+   Research Page Lists
+============================== */
+.content ul {
+  list-style: disc inside;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.content ul li {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+/* ==============================
    Image Section
 ============================== */
 .image-section {
+  margin-top: 25px;
   text-align: center;
-  margin-top: var(--section-spacing);
 }
 
-.image-section img {
+.content-image {
   max-width: 100%;
-  border-radius: 10px;
-}
-
-.image-section figcaption {
-  margin-top: 8px;
-  font-size: 0.9em;
-  color: #666;
+  height: auto;
+  border: none; /* REMOVIDA A BORDA */
+  margin-top: 25px;
 }
 
 /* ==============================
    Footer
 ============================== */
 footer {
-  border-top: 1px solid #ddd;
   text-align: center;
   padding-top: 10px;
-  margin-top: var(--section-spacing);
-  font-size: 0.9em;
-  color: #777;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+footer a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accent-blue-hover);
+  text-decoration: underline;
+}
+
+.footer-icons {
+  display: none;
+}
+
+.footer-icons a {
+  color: var(--accent-blue);
+  font-size: 11px;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: var(--accent-blue-hover);
+}
+
+.footer-note {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  margin-top: 10px;
 }
 
 /* ==============================
-   High Contrast Button
-============================== */
-.contrast-btn {
-  background-color: var(--accent-blue);
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 6px 12px;
-  font-size: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-left: auto;
-}
-
-.contrast-btn:hover {
-  background-color: var(--accent-blue-hover);
-}
-
-/* ==============================
-   High Contrast Mode
-============================== */
-body.high-contrast {
-  background-color: #000 !important;
-  color: #fff !important;
-}
-
-body.high-contrast a {
-  color: #ffff00 !important;
-}
-
-body.high-contrast header,
-body.high-contrast footer {
-  border-color: #fff !important;
-}
-
-body.high-contrast h1,
-body.high-contrast h2,
-body.high-contrast h3 {
-  color: #ffff00 !important;
-}
-
-body.high-contrast .accent-blue,
-body.high-contrast .social-icons a {
-  color: #ffff00 !important;
-}
-
-body.high-contrast .contrast-btn {
-  background-color: #ffff00 !important;
-  color: #000 !important;
-}
-
-/* ==============================
-   Responsividade
+   Responsive Design
 ============================== */
 @media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+
   header {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  header h1 {
-    margin-bottom: 10px;
+  .header-left {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    justify-content: center;
   }
 
   .social-icons {
-    margin: 15px 0; /* reduz o espaço no mobile */
+    margin-left: 0;
+    margin-top: 15px;
   }
 
-  section {
-    margin-top: 25px; /* reduzido no mobile */
+  h2 {
+    font-size: 1.5rem;
   }
 
-  footer {
-    margin-top: 25px;
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .content p {
+    text-align: left;
+  }
+
+  .quotations blockquote {
+    padding: 1rem 1.5rem;
   }
 }
 
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  .social-icons a {
+    font-size: 1rem;
+  }
+
+  .footer-icons a {
+    font-size: 1.1rem;
+  }
+}
+
+/* ==============================
+   Miscellaneous
+============================== */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--accent-blue);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: var(--accent-blue);
+  color: #ffffff;
+}
