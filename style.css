@@ -411,4 +411,8 @@ main p,
 section p {
   text-align: justify;
 }
+body {
+    text-align: justify;
+}
+
 
