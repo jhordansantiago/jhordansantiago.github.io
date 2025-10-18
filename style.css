@@ -57,11 +57,11 @@
    Root Variables
 ============================== */
 :root {
-  --bg-black: #ffffff;
+  --bg-black: #000000;
   --bg-dark: #f5f5f5;
   --bg-white: ##555555;
-  --text-primary: #ffffff;
-  --text-secondary: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #000000;
   --accent-blue: #0044cc;
   --accent-blue-hover: #003399;
   --link-color: #0044cc;
