@@ -411,3 +411,9 @@ html {
   background-color: var(--accent-blue);
   color: #ffffff;
 }
+
+main p,
+section p {
+  text-align: justify;
+}
+
