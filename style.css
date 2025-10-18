@@ -6,7 +6,7 @@
   height: 14px;
   vertical-align: baseline;
   display: inline-block;
-  margin-top: -2px;
+  margin-top: -1px;
   transition: transform 0.1s;
 }
 
@@ -65,7 +65,7 @@
   --accent-blue: #0044cc;
   --accent-blue-hover: #003399;
   --link-color: #0044cc;
-  --border-color: #e5e5e5;
+  --border-color: #000000;
 }
 
 /* ==============================
