@@ -227,12 +227,12 @@ h3 {
 ============================== */
 .quotations blockquote {
   background-color: var(--bg-white);
-  border-left: 4px solid var(--accent-blue);
+  border-left: 1px solid var(--accent-blue);
   padding: 0.1rem 0.4rem;
   margin: 0.1rem 0 0.1rem auto;
   font-style: italic;
   color: var(--text-primary);
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .quotations blockquote p {
