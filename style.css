@@ -243,7 +243,7 @@ h3 {
 
 .quotations blockquote footer {
   text-align: right;
-  font-size: 11px;
+  font-size: 13px;
   color: var(--text-primary);
   font-style: normal;
 }
@@ -415,4 +415,32 @@ body {
     text-align: justify;
 }
 
+/* ==============================
+   AJUSTE DE LARGURA DA IMAGEM (NOVO)
+============================== */
+
+figure {
+    /* Garante que o elemento figure se comporte como um bloco e seja centralizado */
+    margin: 20px auto; 
+    /* Garante que o figure não ultrapasse a largura do .container (500px) */
+    max-width: 100%; 
+    /* Garante que o figure tenha a mesma largura do conteúdo principal */
+    display: block; 
+}
+
+figure img {
+    /* Faz com que a imagem ocupe 100% da largura do seu contêiner (<figure>) */
+    width: 100%; 
+    /* Garante que a imagem não distorça */
+    height: auto; 
+    /* Garante que a imagem seja exibida como um bloco */
+    display: block; 
+}
+
+figure figcaption {
+    /* Opcional: Adiciona um pouco de margem superior para separar da imagem */
+    margin-top: 10px; 
+    /* Garante que a legenda também se ajuste à largura */
+    width: 100%;
+}
 
